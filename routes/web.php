@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-});
+Route::get('/', fn () => view('index'))->name('app');
 
-require __DIR__.'/auth.php';
+Route::any('/{any}', fn () => redirect()->route('app'))->where('any', '.*');

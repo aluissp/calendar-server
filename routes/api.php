@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 // Public routes
 Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
-
 Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
 
-Route::post('/logout', [AuthController::class, 'logout']);
+// Protected routes
+Route::group(['middleware' => ['auth:sanctum']], function () {
+  Route::post('/logout', [AuthController::class, 'logout']);
+});

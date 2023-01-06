@@ -19,8 +19,8 @@ class EventsResource extends JsonResource
             'attributes' => [
                 'title' => $this->title,
                 'notes' => $this->notes,
-                'start' => $this->start,
-                'end' => $this->end,
+                'start' => strtotime($this->start),
+                'end' => strtotime($this->end),
                 'created_at' => $this->created_at,
                 'updated_at' => $this->updated_at,
             ],

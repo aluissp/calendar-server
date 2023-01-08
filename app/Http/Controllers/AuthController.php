@@ -52,4 +52,15 @@ class AuthController extends Controller
             'message' => 'You have successfully been logged out and your token has been deleted.'
         ]);
     }
+
+    public function renew()
+    {
+        $user = auth()->user();
+        $token = $user->createToken('Api Token of ' . $user->name)->plainTextToken;
+
+        return $this->success([
+            'user' => $user,
+            'token' => $token
+        ]);
+    }
 }

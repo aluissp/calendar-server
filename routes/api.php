@@ -23,5 +23,7 @@ Route::post('/register', [AuthController::class, 'register'])->name('auth.regist
 // Protected routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
   Route::post('/logout', [AuthController::class, 'logout']);
+  Route::get('/auth/renew', [AuthController::class, 'renew']);
+
   Route::apiResource('events', EventController::class);
 });

@@ -15,7 +15,7 @@ class EventsResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => (string) $this->id,
+            'id' =>  $this->id,
             'attributes' => [
                 'title' => $this->title,
                 'notes' => $this->notes,
@@ -25,9 +25,9 @@ class EventsResource extends JsonResource
                 'updated_at' => $this->updated_at,
             ],
             'relationships' => [
-                'id' => (string) $this->user->id,
-                'user name' => $this->user->name,
-                'user email' => $this->user->email,
+                'id' =>  $this->user->id,
+                'name' => $this->user->name,
+                'email' => $this->user->email,
             ]
         ];
     }

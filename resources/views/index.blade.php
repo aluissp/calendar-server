@@ -10,15 +10,13 @@
   <!-- Icon -->
   <link rel="shortcut icon" href="{{ asset('vite.svg') }}" type="image/x-icon">
   <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
+  <script type="module" crossorigin src="{{ asset('js/index-be82fa0b.js') }}"></script>
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/index-333575ea.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
-  {{--  todo: remove line below  --}}
-  Testing public assets in laravel --- remove it!
   <div id="root"></div>
 </body>
 

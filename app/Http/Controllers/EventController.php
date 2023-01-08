@@ -20,7 +20,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return EventsResource::collection(auth()->user()->events);
+        return EventsResource::collection(Event::all());
     }
 
     /**

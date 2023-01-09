@@ -8,11 +8,12 @@
   <title>{{ config('app.name', 'Laravel') }}</title>
 
   <!-- Icon -->
-  <link rel="shortcut icon" href="{{ asset('vite.svg') }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ secure_asset('vite.svg') }}"
+    type="image/x-icon">
   <!-- Scripts -->
-  <script type="module" crossorigin src="{{ asset('js/index-be82fa0b.js') }}"></script>
+  <script type="module" defer src="{{ secure_asset('js/index-e17e2e10.js') }}"></script>
   <!-- Styles -->
-  <link href="{{ asset('css/index-333575ea.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/index-333575ea.css') }}" rel="stylesheet">
 
 </head>
 

@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Storage;
 
 Route::get('/', fn () => view('index'))->name('app');
 
-Route::any('/{any}', fn () => redirect()->route('app'))->where('any', '.*');
+Route::any('/{any}', fn () => view('index'))->where('any', '.*');
